@@ -1,0 +1,181 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  text-align: center;
+
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+header{
+  margin-bottom: 100px;
+}
+header span {
+  font-family: 'Inconsolata', monospace;
+  position:absolute;
+  top: 10px;
+  left: 10px;
+  font-weight: 700;
+
+}
+
+/********MAIN STYLE********/
+
+main{
+  width: 90%;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+section{
+  flex-basis: 45%;
+}
+
+img{
+  max-width: 100%;
+}
+
+/* styling the right side of main */
+
+section + section{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: 'Space Mono', monospace;
+  margin-left: 40px;
+}
+
+h1{
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 94x;
+  text-align: left;
+}
+
+section p{
+  font-size: 24px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 35.54px;
+  width: 381px;
+  height: 108px;
+  color: #4F4F4F;
+}
+
+section div{
+  width: 216px;
+  height: 68px;
+  background-color: #333333;
+}
+
+/* styling the container of anchor tag */
+
+section div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+footer {
+  padding-bottom: 20px;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+/**************RESPONSIVENESS*****************/
+
+@media screen and (max-width:500px){
+  main{
+    display: flex;
+    flex-direction: column;
+  }
+
+  section:nth-child(1){
+    width: 80%;
+    height: 60%;
+    margin: auto;
+  }
+
+  section h1{
+    width: 100%;
+    height: 142px;
+    font-size: 2.5rem;
+    line-height: 60px;
+    margin-bottom: 0;
+    padding-right: 2%;
+  }
+
+  section p{
+    width: 328px;
+    height: 81px;
+    font-size: 18px;
+    line-height: 26.66px;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  section div{
+    margin-top: 40px;
+  }
+}
+
+@media (min-width:501px) and (max-width:700px){
+  main{
+    display: flex;
+    flex-direction: column;
+  }
+
+  section:nth-child(1){
+    width: 80%;
+    height: 60%;
+    margin: auto;
+  }
+
+  section h1{
+    width: 100%;
+    height: auto;
+    font-size: 2rem;
+  }
+
+  section div{
+    margin-top: 40px;
+  }
+}
+
